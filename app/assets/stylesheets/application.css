@@ -13,4 +13,47 @@
  *= require_tree .
  *= require_self
  */
- 
+ .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh; /* For demonstration purposes */
+  }
+  .nav{
+    /* border: 1px solid black; */
+    padding:5px;
+  }
+  .formsign{
+    border: 2px solid rgb(228, 223, 223);
+    border-radius: 5px;
+    padding: 10px;
+    width:25%;
+  }
+  .forminput{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .form-label {
+    display: block; /* Ensure labels are displayed on separate lines */
+    margin-bottom: 5px; /* Spacing between label and input */
+    font-weight: bold; /* Make labels bolder for clarity */
+  }
+
+  .form-control {
+    padding: 5px;
+    border: 1px solid #ccc; /* Consistent border for inputs */
+    border-radius: 3px; /* Rounded corners for a smoother look */
+  }
+  .titlehighlight{
+    border-bottom: 3px solid #398c0d;
+  }
+  .buttonsubmit{
+    background-color: #398c0d;
+    padding: 10px;
+    color: blanchedalmond;
+    border-radius: 5px;
+    width:50%;
+  }

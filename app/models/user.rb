@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     include ActiveModel::SecurePassword
     has_secure_password
-    attr_accessor :password_digest
+    #  attr_accessor :password_digest
   
     validates :email, presence: true
     normalizes:email,with:->(email){email.strip.downcase}

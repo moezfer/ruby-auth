@@ -1,7 +1,6 @@
 <!-- app/views/registration/new.html.erb -->
-
-
-<h1 class=''> Sign up Page </h1>
+<div class='formsign'>
+ <h1 class=''><span class='titlehighlight'>Sign</span> up</h1>
 
 <%= form_with model: @user, local: true, data: { turbo: false }, url: sign_up_path do |form| %>
 
@@ -14,30 +13,33 @@
         </div>
     <% end %>
    
-    <div class="mb-3 ">
+    <div class="forminput ">
     
- <%= form.label :email, "Email Address" %>
+ <%= form.label :email, "Email Address",class:'form-label' %>
    
     
- <%= form.text_field :email, class: "", placeholder: "myname@email.com" %>
+ <%= form.text_field :email, class: "form-control", placeholder: "myname@email.com" %>
     
        
        
     </div>
-    <div class="mb-3 ">
-        <%= form.label :password, "Password" %> 
+    <div class="forminput">
+        <%= form.label :password, "Password",class:'form-label' %> 
         <%= form.password_field :password,  class: "form-control", placeholder: "strong password"%>
     </div>
-    <div>
-    <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation, required: true %>
+    <div class='forminput'>
+    <%= form.label :password_confirmation,class:'form-label' %>
+    <%= form.password_field :password_confirmation,class:'form-control', required: true %>
   </div>
-    <div class="mb-3">
-        <%= form.submit "Sign Up", class: 'btn btn-primary' %>
+    <div class="forminput">
+        <%= form.submit "Sign Up", class: 'buttonsubmit' %>
     </div>
     <%= link_to "Sign In", log_in_path, class: "btn btn-primary" %>
 
 <% end %>
  
+ <div>
+
+
 
  
